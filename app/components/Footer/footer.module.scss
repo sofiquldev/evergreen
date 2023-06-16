@@ -1,0 +1,26 @@
+@use '@/app/styles/variables.scss' as *;
+@use '@/app/styles/media-query.scss' as *;
+
+.main {}
+.inner {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(32px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+.widgets {
+  width: clamp(400px, 40%, 500px);
+  display: grid;
+  justify-content: end;
+  gap: clamp(32px, 5vw, 60px);
+  grid-template-columns: repeat(auto-fill,minmax(170px, max-content));
+  @include respond(tabport) {
+    justify-content: start;
+  }
+  @include respond(phone) {
+    gap: clamp(32px, 5vw, 60px) 0;
+  }
+}
+.copyright {
+  padding-top: clamp(32px, 5vw, 60px);
+}

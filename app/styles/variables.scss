@@ -1,0 +1,16 @@
+$colors: (
+  primary: #07BEB8,
+  secondary: #202A2B,
+  white: #fff,
+  black: #000,
+);
+
+// @function getColor($key) {
+//   // @return map-get($colors, $key);
+//   @return var(--clr-#{$key}, map-get($colors, $key))
+// }
+
+$transition: all 300ms ease-in-out;
+
+
+@import './functions.scss';

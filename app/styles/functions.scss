@@ -1,0 +1,4 @@
+@function getColor($key) {
+  // @return map-get($colors, $key);
+  @return var(--clr-#{$key}, map-get($colors, $key))
+}

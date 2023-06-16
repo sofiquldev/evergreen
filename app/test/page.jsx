@@ -108,6 +108,7 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <button className='btn-primary'>Get Started</button>
     </main>
   )
 }

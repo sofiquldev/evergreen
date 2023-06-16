@@ -1,0 +1,15 @@
+@use '@/app/styles/variables.scss' as *;
+@use '@/app/styles/media-query.scss' as *;
+
+.main {
+  color: getColor(white);
+  // margin-bottom: clamp(32px, 5vw, 60px);
+}
+.title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,60 @@
+@use '@/app/styles/variables.scss' as *;
+@use '@/app/styles/media-query.scss' as *;
+
+.main {}
+.inner {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: max-content auto;
+  gap: clamp(25px, 3vw, 50px);
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+.testimonial {
+  color: white;
+  width: clamp(300px, 60vw, 800px);
+  @include respond(phone) {
+    width: 100%;
+  }
+  &:first-child {
+    align-items: stretch;
+  }
+  &__msg {
+    color: getColor(white);
+    font-size: clamp(22px, 2vw, 38px);
+    line-height: 1.25;
+    font-weight: 500;
+  }
+  &__footer {
+    border-top: 2px solid rgba(white, 0.2);
+    margin-top: clamp(25px, 2.5vw, 48px);
+    padding-top: clamp(25px, 2.5vw, 48px);
+  }
+  &__user {
+    color: getColor(white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(20px, 2vw, 32px);
+    img {
+      width: clamp(56px, 5vw, 72px);
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: getColor(primary);
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.navBtn {
+  height: clamp(56px, 5vw, 72px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}

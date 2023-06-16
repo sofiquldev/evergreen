@@ -1,0 +1,14 @@
+// .left {}
+
+// .right {}
+@use '@/app/styles/media-query.scss' as *;
+
+.brand {
+  display: block;
+  width: clamp(150px, 50%, 260px);
+  // height: 60px;
+  img {
+    @apply w-full h-full object-contain;
+    object-position: left center;
+  }
+}

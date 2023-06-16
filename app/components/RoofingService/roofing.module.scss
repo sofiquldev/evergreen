@@ -1,0 +1,48 @@
+@use '@/app/styles/variables.scss' as *;
+@use '@/app/styles/media-query.scss' as *;
+
+.main {
+  background: getColor(white);
+}
+/* 
+.list {
+  display: grid;
+  // grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 1.25vw, 20px);
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(#202A2B, 0.24);
+  @include respond(phone-mid) {
+    grid-template-columns: 1fr;
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(12px, 1.25vw, 20px);
+  }
+  &__icon {
+    width: 25px;
+    aspect-ratio: 1/1;
+    background-color: getColor(primary);
+    border-radius: 50%;
+    color: getColor(white);
+    font-size: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+} */
+
+.image {
+  
+  position: relative;
+  img {
+    transform-origin: top left;
+    transform: scale(1.2);
+    @include respond(medium) {
+      transform: scale(1);
+    }
+    // border-radius: 45% 4px 45% 4px;
+  }
+}

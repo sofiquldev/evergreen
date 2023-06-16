@@ -1,0 +1,126 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/media-query.scss' as *;
+
+// banner.<className>
+.wrapper {}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+  }
+}
+.content {
+  width: 100%;
+  max-width: clamp(300px, 50vw, 750px);
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: getColor(white);
+  @include respond(phone) {
+    font-size: clamp(32px, 5vw, 60px);  
+  }
+  strong {
+    font-weight: 500;
+    color: getColor(primary);
+  }
+}
+.image {
+  position: relative;
+  @include respond(tabport) {
+    width: clamp(250px, 50%, 350px);
+  }
+  @include respond(phone) {
+    width: clamp(250px, 70%, 400px);
+    margin: auto;
+    img {
+      transform: translateX(0px) !important;
+    }
+  }
+  img {
+    transform: translateX(50px);
+    @include respond(medium) {
+      transform: translateX(0px);
+    }
+  }
+}
+.circlerRotateButton {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(-50%);
+  @include respond(1100px) {
+    left: 45%;
+  }
+  @include respond(phone) {
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include respond(phone-sm) {
+    bottom: 50%;
+    transform: translate(-50%, 20%);
+  }
+}
+
+
+// banenr.footer
+.footer {
+  border-color: rgba(white, 0.2);
+  margin-bottom: clamp(50px, 7vw, 80px);
+  &__widget {
+    padding-top: clamp(16px, 2vw, 32px);
+  }
+}
+
+
+// banner.about
+.about {
+  border-radius: clamp(150px, 40vw, 750px) clamp(150px, 40vw, 750px) 0 0;
+  background-color: getColor(white);
+  padding: clamp(75px, 10vw,140px) 0;
+  &__image {
+    position: relative;
+    width: clamp(200px, 50%, 787px);
+    margin: auto;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 45% 4px 45% 4px;
+    }
+  }
+  &__circlerRotateButton {
+    width: clamp(100px, 14vw, 205px) !important;
+    transform: rotate(-45deg);
+    span {
+      color: getColor(white);
+      font-size: 56px;
+    }
+  }
+
+  &__content {
+    margin-top: clamp(75px, 10vw,140px);
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: getColor(secondary);
+      height: calc(100% - 20px);
+      border-bottom: 1px solid rgba(#202A2B, 0.24);
+      @include respond(tabland) {
+        height: 100%;
+      }
+      @include respond(phone) {
+        font-size: 18px;
+      }
+    }
+  }
+}

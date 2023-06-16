@@ -1,0 +1,9 @@
+@use '@/app/styles/media-query.scss' as *;
+
+.main {}
+.inner {}
+.image {
+  // @include respond(phone) {
+  //   max-width: 300px;
+  // }
+}
